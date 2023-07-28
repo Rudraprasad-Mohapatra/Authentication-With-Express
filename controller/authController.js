@@ -132,5 +132,3 @@ module.exports = {
     getuser,
     logout
 }
-
-// Start from : 17:13
