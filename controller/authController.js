@@ -37,7 +37,7 @@ const signup = async (req, res, next) => {
     } catch (e) {
         if (e.code === 11000) {
             return res.status(400).json({
-                success: true,
+                success: false,
                 message: "Account already exists with provided email id"
             });
         }
