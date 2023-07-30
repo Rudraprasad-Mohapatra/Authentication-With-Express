@@ -103,7 +103,7 @@ const getuser = async (req, res, next) => {
             data: user
         });
     } catch (e) {
-        return res.status(200).json({
+        return res.status(400).json({
             success: false,
             data: e.message
         });
@@ -121,7 +121,7 @@ const logout = (req, res) => {
         message: "Logged Out" 
     });
     } catch (e) {
-        return res.status(200).json({
+        return res.status(400).json({
             success: false,
             data: e.message
         });
