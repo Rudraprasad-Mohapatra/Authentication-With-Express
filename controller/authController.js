@@ -86,7 +86,7 @@ const signin = async (req, res) => {
     } catch (e) {
         return res.status(400).json({
             success: "false",
-            message: "e.message"
+            message: e.message
         });
     }
 
@@ -117,7 +117,9 @@ const logout = (req, res) => {
             httpOnly: true
         };
         res.cookie("token", null, cookieOption);
-        res.status(200).json({ success: true, message: "Logged Out" });
+        res.status(200).json({ success: true,
+        message: "Logged Out" 
+    });
     } catch (e) {
         return res.status(200).json({
             success: false,
